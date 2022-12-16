@@ -1,0 +1,28 @@
+<div class="demonlist">
+  <h1>Demonlist</h1>
+
+  <mat-list class="list">
+     <mat-list-item (click)="goToLink(demon.video)" class="mat-elevation-z5 demon" *ngFor="let demon of demons" matRipple>
+      <div class="image"><img alt="Image" src="{{demon.thumbnail}}" height="170"></div>
+
+      <div class="description">
+
+        <div class="name">
+          <span class="position">#{{demon.position}}</span>
+          {{demon.name}}
+        </div>
+
+        <div class="publisher" [class.banned]="demon.publisher.banned">
+          {{demon.publisher.name}}
+        </div>
+
+        <div class="verifier">
+          verified by:<br>
+          <div class="nickname" [class.banned]="demon.publisher.banned">{{demon.verifier.name}}</div>
+        </div>
+ 
+      </div>
+
+    </mat-list-item>
+  </mat-list>
+</div>

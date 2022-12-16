@@ -1,0 +1,17 @@
+<mat-sidenav-container class="sidebar-container">
+  <mat-sidenav class="mat-elevation-z8" mode="side" opened>
+
+    <a routerLink="/demonlist" class="menu-button" mat-button>
+      <mat-icon>format_list_bulleted</mat-icon>
+      <span>Demonlist</span>
+    </a>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
